@@ -1,6 +1,6 @@
-$(document).ready(function() {
+$(document).ready(function () {
   // Function to add a new item
-  $('#addItemForm').on('submit', function(e) {
+  $('#addItemForm').on('submit', function (e) {
     e.preventDefault();
     let inputValue = $('#input').val().trim();
     if (inputValue === '') {
@@ -12,12 +12,12 @@ $(document).ready(function() {
   });
 
   // Function to cross out an item
-  $('#list').on('dblclick', 'li', function() {
+  $('#list').on('dblclick', 'li', function () {
     $(this).toggleClass('strike');
   });
 
   // Function to delete an item
-  $('#list').on('click', '.crossOutButton', function() {
+  $('#list').on('click', '.crossOutButton', function () {
     $(this).parent().addClass('delete');
   });
 
